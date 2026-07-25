@@ -1,0 +1,22 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "permission": "allow",
+    "provider": {
+        "llama.cpp": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "llama-server (local)",
+            "options": {
+                "baseURL": "http://llamacpp:8080/v1"
+            },
+            "models": {
+                "default": {
+                    "name": "default",
+                    "limit": {
+                        "context": 62000,
+                        "output": 62000
+                    }
+                }
+            }
+        }
+    }
+}
