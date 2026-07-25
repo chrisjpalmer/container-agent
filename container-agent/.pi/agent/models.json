@@ -1,0 +1,18 @@
+{
+  "providers": {
+    "llama-cpp": {
+      "baseUrl": "http://llamacpp:8080/v1",
+      "api": "openai-completions",
+      "apiKey": "none",
+      "models": [
+        {
+          "id": "default",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 62000,
+          "maxTokens": 32000
+        }
+      ]
+    }
+  }
+}

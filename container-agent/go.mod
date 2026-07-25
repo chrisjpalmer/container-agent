@@ -1,4 +1,4 @@
-module dagger/pi-agent
+module github.com/chrisjpalmer/container-agent/container-agent
 
 go 1.26.4
 

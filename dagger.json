@@ -1,8 +1,8 @@
 {
-  "name": "claude-agent",
+  "name": "container-agent",
   "engineVersion": "v0.21.7",
   "sdk": {
     "source": "go"
   },
-  "source": "claude-agent"
+  "source": "container-agent"
 }

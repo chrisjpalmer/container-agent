@@ -1,0 +1,11 @@
+{
+  "theme":"dark",
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Edit(*)",
+      "Cd(*)"
+    ]
+  }
+}
