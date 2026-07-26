@@ -47,7 +47,10 @@ func (m *Opencode) Sh(ctx context.Context) (*dagger.Changeset, error) {
 }
 
 func (m *Opencode) base(ctx context.Context) (*dagger.Container, error) {
-	ctr := base()
+	ctr, err := base(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("error configuring base: %w", err)
+	}
 
 	ctr = withAsdfPlugins(ctr)
 
@@ -57,7 +60,7 @@ func (m *Opencode) base(ctx context.Context) (*dagger.Container, error) {
 
 	ctr = withAsdfInstall(ctr)
 
-	ctr, err := withGoSetup(ctx, ctr)
+	ctr, err = withGoSetup(ctx, ctr)
 	if err != nil {
 		return nil, fmt.Errorf("failed to set up go correctly: %w", err)
 	}
